@@ -15,10 +15,11 @@ body {
 
 /* Video Background */
 .video-background {
-  position: fixed;
+  position: fixed; /* bg will always be fix anchor at bottom right*/
   right: 0;
   bottom: 0;
-
+  /* width: 100%; */
+  height: 100vh;
 }
 
 video {
@@ -32,7 +33,9 @@ video {
   position: fixed;
   left: 0;
   top: 0;
-
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(158, 229, 243, 0.3);
 }
 
 /* Container */
@@ -127,11 +130,12 @@ li span {
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .video-background {
-
+    height: 100vh;
   }
   
   video {
-
+    object-fit: cover;
+    object-position: 70%; /* Hor Ver*/
     margin-top: -1px;
   }
 
