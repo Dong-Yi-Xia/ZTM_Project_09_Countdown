@@ -19,9 +19,12 @@ https://www.w3schools.com/jsref/jsref_obj_date.asp<br>
 
 Date to String<br>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString<br>
-toISOString() - international standard time format  YYYY-MM-DDTHH:mm:ss.sssZ<br>
-toString() - local time zone format<br>
-const today = new Date()<br>
+toISOString() - international standard format. || YYYY-MM-DDTHH:mm:ss.sssZ || "2021-02-24T21:39:12.461Z"<br>
+toString() - local time zone format. ||"Wed Feb 24 2021 16:37:48 GMT-0500 (Eastern Standard Time)”<br>
+toLocaleString() - local date and time.|| MM/DD/YY HH:MM:SS AM/PM || "2/24/2021, 4:36:02 PM"<br>
+let date = new Date(); <br>
+let dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000 )).toISOString().split("T")<br>
+
 
 preventDefault<br>
 https://www.w3schools.com/jsref/event_preventdefault.asp<br>
