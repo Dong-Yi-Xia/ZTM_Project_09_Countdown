@@ -1,6 +1,7 @@
 const inputContainer = document.getElementById('input-container')
 const countdownForm = document.getElementById('countdownForm')
 const dateEl = document.getElementById('date-picker')
+const titleEl = document.getElementById('title')
 
 const countdownEl = document.getElementById('countdown')
 const countdownElTitle = document.getElementById('countdown-title')
@@ -121,6 +122,8 @@ function reset() {
     // Reset values of title and date
     countdownTitle = ''
     countdownDate= ''
+    titleEl.value = ''
+    dateEl.value = ''
     localStorage.removeItem('countdown')
 }
 
