@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
-
+  font-family: Ubuntu, sans-serif;
 }
 
 /* Video Background */
@@ -18,7 +18,7 @@ body {
   position: fixed; /* bg will always be fix anchor at bottom right*/
   right: 0;
   bottom: 0;
-  /* width: 100%; */
+  /* width: 100vw; */
   height: 100vh;
 }
 
@@ -49,6 +49,7 @@ video {
   z-index: 2;
   display: flex;
   justify-content: center;
+  background-color: rgba(158, 229, 243, 0.85);
 
 }
 
@@ -82,7 +83,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  font-family: Ubuntu, sans-serif;
 }
 
 /* Button */
@@ -99,6 +100,9 @@ button {
   outline: none;
 }
 
+button:hover {
+  filter: brightness(110%);
+}
 
 
 /* Countdown */
@@ -107,7 +111,7 @@ ul {
 }
 
 li {
-
+  display: inline-block; /* display in one line */
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -126,6 +130,33 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0%{
+    color: rgb(230, 39, 39);
+  }
+
+  25%{
+    color: rgb(227, 247, 52);
+  }
+
+  50%{
+    color: rgb(23, 216, 6);
+    transform: scale(1.5);
+  }
+
+  75%{
+    color: rgb(0, 89, 255);
+  }
+
+  100%{
+    color: rgb(219, 2, 136);
+  }
+}
+
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
@@ -140,7 +171,8 @@ li span {
   }
 
   .container {
-
+    min-width: unset;
+    width: 95vw;
     min-height: 245px;
     padding: 20px;
     margin: 10px;
