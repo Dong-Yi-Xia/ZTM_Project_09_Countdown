@@ -121,6 +121,7 @@ function reset() {
     // Reset values of title and date
     countdownTitle = ''
     countdownDate= ''
+    localStorage.removeItem('countdown')
 }
 
 
@@ -133,7 +134,7 @@ function restorePreviousCountdown(){
         countdownDate = savedCountdown.date
         // Plug back the future date back into countdownValue
         countdownValue = new Date(countdownDate).getTime()
-        updateDOM
+        updateDOM()
     }
 }
 
