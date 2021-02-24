@@ -50,3 +50,13 @@ localStorage.setItem(‘key’, ‘value’)<br>
 localStorage.getItem(‘key’)<br>
 localStorage.removeItem(‘key’)   <br>
 
+DOM Element <br>
+https://www.w3schools.com/jsref/met_element_setattribute.asp <br>
+element.setAttribute(attributename, attributevalue) || element.setAttribute("type", "button") <br>
+
+DOM Element Style <br>
+https://www.w3schools.com/jsref/dom_obj_style.asp <br>
+element.style.property = value || element.style.width = "90px"; <br>
+element.style.setProperty('color', ‘red’); <br>
+
+
